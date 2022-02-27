@@ -1,0 +1,49 @@
+﻿@model ThaiChauThanh_173.Models.phong
+
+@{
+    ViewBag.Title = "xemChitiet";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+
+<h2>xemChitiet</h2>
+
+<div>
+    <h4>phong</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.maphong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.maphong)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.tinhtrang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tinhtrang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.maloai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.maloai)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.loaiphong.songuoi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.loaiphong.dongia)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.maphong }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

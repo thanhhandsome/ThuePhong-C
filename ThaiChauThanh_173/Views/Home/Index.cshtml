@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ThaiChauThanh_173.Models.phong>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+
+<h2>Danh sách Phòng</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.maphong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tinhtrang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.maloai)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.maphong)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.tinhtrang)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.maloai)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.maphong }) |
+        @Html.ActionLink("Details", "xemChitiet", new { id = item.maphong }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.maphong })
+    </td>
+</tr>
+}
+
+</table>
